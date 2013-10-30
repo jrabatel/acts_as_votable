@@ -31,10 +31,10 @@ module ActsAsVotable
 
     end
 
-    # voting
-    def vote args
-      args[:votable].vote args.merge({:voter => self})
-    end
+    # # voting
+    # def vote args
+    #   args[:votable].vote args.merge({:voter => self})
+    # end
 
     def vote_up_for model=nil, args={}
       vote :votable => model, :vote_scope => args[:vote_scope], :vote => true
