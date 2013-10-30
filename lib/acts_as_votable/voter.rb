@@ -5,11 +5,11 @@ module ActsAsVotable
 
       # allow user to define these
       aliases = {
-        :vote_up_for   => [:likes, :upvotes, :up_votes],
-        :vote_down_for => [:dislikes, :downvotes, :down_votes],
-        :unvote_for    => [:unlike, :undislike],
-        :voted_up_on?   => [:voted_up_for?, :liked?],
-        :voted_down_on? => [:voted_down_for?, :disliked?]
+        # :vote_up_for   => [:likes, :upvotes, :up_votes],
+        # :vote_down_for => [:dislikes, :downvotes, :down_votes],
+        # :unvote_for    => [:unlike, :undislike],
+        # :voted_up_on?   => [:voted_up_for?, :liked?],
+        # :voted_down_on? => [:voted_down_for?, :disliked?]
       }
 
       base.class_eval do
@@ -31,10 +31,10 @@ module ActsAsVotable
 
     end
 
-    # # voting
-    # def vote args
-    #   args[:votable].vote args.merge({:voter => self})
-    # end
+    # voting
+    def vote args
+      args[:votable].vote args.merge({:voter => self})
+    end
 
     def vote_up_for model=nil, args={}
       vote :votable => model, :vote_scope => args[:vote_scope], :vote => true

@@ -10,26 +10,27 @@ module ActsAsVotable
       # allow the user to define these himself 
       aliases = {
 
-        :vote_up => [
-          :up_by, :upvote_by, :like_by, :liked_by, :vote_by, 
-          :up_from, :upvote_from, :upvote_by, :like_from, :liked_from, :vote_from 
-        ],
+        # :vote_up => [
+        #   :up_by, :upvote_by, :like_by, :liked_by, :vote_by, 
+        #   :up_from, :upvote_from, :upvote_by, :like_from, :liked_from, :vote_from 
+        # ],
 
-        :vote_down => [
-          :down_by, :downvote_by, :dislike_by, :disliked_by,
-          :down_from, :downvote_from, :downvote_by, :dislike_by, :disliked_by
-        ],
+        # :vote_down => [
+        #   :down_by, :downvote_by, :dislike_by, :disliked_by,
+        #   :down_from, :downvote_from, :downvote_by, :dislike_by, :disliked_by
+        # ],
 
-        :up_votes => [
-          :true_votes, :ups, :upvotes, :likes, :positives, :for_votes,
-        ],
+        # :up_votes => [
+        #   :true_votes, :ups, :upvotes, :likes, :positives, :for_votes,
+        # ],
 
-        :down_votes => [
-          :false_votes, :downs, :downvotes, :dislikes, :negatives
-        ],
-        :unvote => [
-          :unliked_by, :undisliked_by
-        ]
+        # :down_votes => [
+        #   :false_votes, :downs, :downvotes, :dislikes, :negatives
+        # ],
+        # :unvote => [
+        #   :unliked_by, :undisliked_by
+        # ]
+
       }
 
       base.class_eval do
